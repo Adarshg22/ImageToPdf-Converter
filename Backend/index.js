@@ -4,7 +4,10 @@ const multer = require("multer");
 const PDFDocument = require("pdfkit");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
+
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
