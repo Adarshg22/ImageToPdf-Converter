@@ -30,7 +30,7 @@ function App() {
     images.forEach((img) => formData.append("images", img));
 
     const response = await axios.post(
-      "https://imagetopdf-converter.onrender.com",
+      "https://imagetopdf-converter.onrender.com/convert",
       formData,
       { responseType: "blob" },
     );
